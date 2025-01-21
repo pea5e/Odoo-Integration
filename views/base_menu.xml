@@ -1,0 +1,31 @@
+<odoo>
+    <menuitem
+    id="shipment_root_menu"
+    name="Shipement"
+    />
+    <!-- <menuitem
+    id="produits_menu"
+    name="Produits"
+    parent="shipment_root_menu"
+    />
+    <menuitem
+    id="entrees_menu"
+    name="Entrees"
+    parent="shipment_root_menu"
+    /> -->
+    <menuitem
+    id="commandes_menu"
+    name="Commandes"
+    parent="shipment_root_menu"
+    />
+    <!-- <menuitem
+    id="lignes_menu"
+    name="Lignes des Commandes"
+    parent="shipment_root_menu"
+    /> -->
+    <!-- <menuitem
+    id="synchroniser_menu"
+    name="Synchroniser"
+    parent="shipment_root_menu"
+    /> -->
+</odoo>

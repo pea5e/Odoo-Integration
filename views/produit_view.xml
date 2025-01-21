@@ -1,0 +1,44 @@
+<odoo>
+
+    <record id="produits_view_tree" model="ir.ui.view">
+        <field name="name">Produits</field>
+        <field name="model">produit</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name" />
+                <field name="shopify_id" />
+                <field name="price" />
+                <field name="quantity" />
+            </list>
+        </field>
+    </record>
+
+    <record id="produits_view_form" model="ir.ui.view">
+        <field name="name">Ajouter produit</field>
+        <field name="model">produit</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name" />
+                        <field name="price" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="produits_action" model="ir.actions.act_window">
+        <field name="name">Produits</field>
+        <field name="res_model">produit</field>
+    </record>
+    <menuitem
+        id="produits_menu_item"
+        name="Produits"
+        parent="shipment_root_menu"
+        action="produits_action"
+    />
+
+
+
+</odoo>
