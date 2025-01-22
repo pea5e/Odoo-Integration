@@ -6,8 +6,7 @@ url = "https://ws.dev.aramex.net/shippingapi.v2/shipping/service_1_0.svc/json/Cr
 url = "https://ws.aramex.net/shippingapi.v2/shipping/service_1_0.svc/json/CreateShipments"
 
 # https://www.aramex.com/docs/default-source/resourses/resourcesdata/shipping-services-api-manual.pdf
-json = """
-{
+json = {
     "ClientInfo" : {
         "UserName":"testingapi@aramex.com",
         "Password":"R123456789$r",
@@ -19,27 +18,27 @@ json = """
         "Source":24
     },
     "Transaction" : {
-        "Reference1":null,
-        "Reference2":null,
-        "Reference3":null,
-        "Reference4":null,
-        "Reference5":null
+        "Reference1":None,
+        "Reference2":None,
+        "Reference3":None,
+        "Reference4":None,
+        "Reference5":None
     },
     "Shipments" : {
-        "Reference1":null,
-        "Reference2":null,
-        "Reference3":null,
+        "Reference1":None,
+        "Reference2":None,
+        "Reference3":None,
         "Shipper":{
-            "Reference1":null,
-            "Reference2":null,
+            "Reference1":None,
+            "Reference2":None,
             "AccountNumber":"102331",
-            "PartyAddress":null,
-            "Contact":null
+            "PartyAddress":None,
+            "Contact":None
         },
         "Consignee":{
-            "Reference1":null,
-            "Reference2":null,
-            "AccountNumber":null,
+            "Reference1":None,
+            "Reference2":None,
+            "AccountNumber":None,
             "PartyAddress":{
                 "Line1":"",
                 "Line2":"",
@@ -64,37 +63,37 @@ json = """
                 "Type":""
             }
         },
-        "ThirdParty":null,
+        "ThirdParty":None,
         "ShippingDateTime":"",
-        "DueDate":null,
-        "Comments":null,
-        "PickupLocation":null,
-        "OperationsInstructions":null,
-        "AccountingInstructions":null,
+        "DueDate":None,
+        "Comments":None,
+        "PickupLocation":None,
+        "OperationsInstructions":None,
+        "AccountingInstructions":None,
         "Details":{
-            "Dimensions":null,
-            "NumberOfPieces":0,
+            "Dimensions":None,
+            "NumberOfPieces":1,
             "ActualWeight":100,
             "ProductGroup":"DOM",
             "ProductType":"OND",
             "PaymentType":"C",
             "PaymentOptions":"ASCC",
-            "Services":null,
+            "Services":None,
             "DescriptionOfGoods":"Electronics",
             "GoodsOriginCountry":"MA",
-            "CustomsValueAmount":null,
-            "CashOnDelivery":null,
-            "InsuranceAmount":null,
-            "CashAdditionalAmount":null,
-            "CashAdditionalDescription":null,
-            "CollectAmount":null,
-            "items":null
+            "CustomsValueAmount":None,
+            "CashOnDelivery":None,
+            "InsuranceAmount":None,
+            "CashAdditionalAmount":None,
+            "CashAdditionalDescription":None,
+            "CollectAmount":None,
+            "items":None
         },
-        "Attachments":null,
-        "ForeignHAWB":null,
-        "TransportType":null,
-        "Number":null,
-        "PickupGUID":null
+        "Attachments":None,
+        "ForeignHAWB":None,
+        "TransportType":None,
+        "Number":None,
+        "PickupGUID":None
     },
     "LabelInfo" : {
         "ReportID":9201,
@@ -102,4 +101,8 @@ json = """
     }
 }
 
-"""
+
+req = post(url,json=json)
+
+print(req.content.decode())
+print(req.status_code)
