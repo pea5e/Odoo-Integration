@@ -32,10 +32,62 @@ json = """
         "Shipper":{
             "Reference1":null,
             "Reference2":null,
+            "AccountNumber":"",
+            "PartyAddress":{
+                "Line1":"",
+                "Line2":"",
+                "Line3":"",
+                "City":"",
+                "StateOrProvinceCode":"",
+                "PostCode":"",
+                "CountryCode":""
+            },
+            "Contact":{
+                "Department":"",
+                "PersonName":"",
+                "Title":"",
+                "CompanyName":"",
+                "PhoneNumber1":"",
+                "PhoneNumber1Ext":"",
+                "PhoneNumber2":"",
+                "PhoneNumber2Ext":"",
+                "FaxNumber":"",
+                "CellPhone":"",
+                "EmailAddress":"",
+                "Type":""
+            }
         },
         "Consignee":{
             "Reference1":null,
             "Reference2":null,
+            "Reference3":null,
+            "Shipper":{
+                "Reference1":null,
+                "Reference2":null,
+                "AccountNumber":"",
+                "PartyAddress":{
+                    "Line1":"",
+                    "Line2":"",
+                    "Line3":"",
+                    "City":"",
+                    "StateOrProvinceCode":"",
+                    "PostCode":"",
+                    "CountryCode":""
+                },
+                "Contact":{
+                    "Department":"",
+                    "PersonName":"",
+                    "Title":"",
+                    "CompanyName":"",
+                    "PhoneNumber1":"",
+                    "PhoneNumber1Ext":"",
+                    "PhoneNumber2":"",
+                    "PhoneNumber2Ext":"",
+                    "FaxNumber":"",
+                    "CellPhone":"",
+                    "EmailAddress":"",
+                    "Type":""
+                }
         },
         "ThirdParty":null,
         "ShippingDateTime":"",
