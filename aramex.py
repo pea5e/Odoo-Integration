@@ -9,14 +9,14 @@ url = "https://ws.aramex.net/shippingapi.v2/shipping/service_1_0.svc/json/Create
 json = """
 {
     "ClientInfo" : {
-        "UserName":"",
-        "Password":"",
-        "Version":"",
-        "AccountNumber":"",
-        "AccountPin":"",
-        "AccountEntity":"",
-        "AccountCountryCode":"",
-        "Source":0
+        "UserName":"testingapi@aramex.com",
+        "Password":"R123456789$r",
+        "Version":"v1",
+        "AccountNumber":"102331",
+        "AccountPin":"321321",
+        "AccountEntity":"LON",
+        "AccountCountryCode":"GB",
+        "Source":24
     },
     "Transaction" : {
         "Reference1":null,
@@ -32,7 +32,14 @@ json = """
         "Shipper":{
             "Reference1":null,
             "Reference2":null,
-            "AccountNumber":"",
+            "AccountNumber":"102331",
+            "PartyAddress":null,
+            "Contact":null
+        },
+        "Consignee":{
+            "Reference1":null,
+            "Reference2":null,
+            "AccountNumber":null,
             "PartyAddress":{
                 "Line1":"",
                 "Line2":"",
@@ -56,38 +63,6 @@ json = """
                 "EmailAddress":"",
                 "Type":""
             }
-        },
-        "Consignee":{
-            "Reference1":null,
-            "Reference2":null,
-            "Reference3":null,
-            "Shipper":{
-                "Reference1":null,
-                "Reference2":null,
-                "AccountNumber":"",
-                "PartyAddress":{
-                    "Line1":"",
-                    "Line2":"",
-                    "Line3":"",
-                    "City":"",
-                    "StateOrProvinceCode":"",
-                    "PostCode":"",
-                    "CountryCode":""
-                },
-                "Contact":{
-                    "Department":"",
-                    "PersonName":"",
-                    "Title":"",
-                    "CompanyName":"",
-                    "PhoneNumber1":"",
-                    "PhoneNumber1Ext":"",
-                    "PhoneNumber2":"",
-                    "PhoneNumber2Ext":"",
-                    "FaxNumber":"",
-                    "CellPhone":"",
-                    "EmailAddress":"",
-                    "Type":""
-                }
         },
         "ThirdParty":null,
         "ShippingDateTime":"",
