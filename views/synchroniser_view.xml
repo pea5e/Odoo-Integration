@@ -1,0 +1,16 @@
+<odoo>
+
+    <record id="synchroniser_action" model="SynchroniserWindow">
+        <field name="name">Synchroniser</field>
+        <field name="res_model">synchroniser</field>
+        
+    </record>
+    <menuitem
+        id="synchroniser_menu_item"
+        name="Synchroniser"
+        parent="synchroniser_menu"
+        action="synchroniser_action"
+    />
+
+
+</odoo>

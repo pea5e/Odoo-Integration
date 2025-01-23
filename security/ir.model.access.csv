@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_produit,access_produit,model_produit,,1,1,1,1
+access_entree,access_entree,model_entree,,1,1,1,0
+access_commande,access_commande,model_commande,,1,1,1,1
+access_ligne,access_ligne,model_ligne,,1,1,1,1
+access_synchroniser,access_synchroniser,model_synchroniser,,1,0,0,0
+access_livraison,access_livraison,model_livraison,,1,1,1,0

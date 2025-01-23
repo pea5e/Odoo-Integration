@@ -1,0 +1,29 @@
+<odoo>
+
+    <record id="lignes_view_tree" model="ir.ui.view">
+        <field name="name">Ligne des Commandes</field>
+        <field name="model">ligne</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="lid" />
+                <field name="quantity" />
+                <field name="produit" />
+                <field name="commande" />
+            </list>
+        </field>
+    </record>
+
+    <record id="lignes_action" model="ir.actions.act_window">
+        <field name="name">Ligne des Commandes</field>
+        <field name="res_model">ligne</field>
+        
+    </record>
+    <menuitem
+        id="lignes_menu_item"
+        name="Lignes des Commandes"
+        parent="lignes_menu"
+        action="lignes_action"
+    />
+
+
+</odoo>

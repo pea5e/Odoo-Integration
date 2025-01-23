@@ -1,0 +1,109 @@
+<odoo>
+
+    <record id="commandes_view_tree" model="ir.ui.view">
+        <field name="name">Commandes</field>
+        <field name="model">commande</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="cid" />
+                <field name="client" />
+                <field name="montant" />
+                <field name="name" />
+                <field name="time" />
+                <field name="city" />
+                <field name="adresse" />
+            </list>
+        </field>
+    </record>
+
+    <record id="commandes_view_form" model="ir.ui.view">
+        <field name="name">Commandes</field>
+        <field name="model">commande</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="cid" />
+                        <field name="client" />
+                        <field name="montant" />
+                        <field name="name" />
+                        <field name="time" />
+                        <field name="city" />
+                        <field name="adresse" />
+                        <field name="lignes" >
+                            <list>
+                                <field name="lid"/>
+                                <field name="quantity"/>
+                                <field name="produit"/>
+                            </list>
+                        </field>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+    <record id="livraison_view_form" model="ir.ui.view">
+        <field name="name">Livraison</field>
+        <field name="model">livraison</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="commande" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="livraison_view_tree" model="ir.ui.view">
+        <field name="name">Livraison</field>
+        <field name="model">livraison</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="commande" />
+                <field name="suivi" />
+            </list>
+        </field>
+    </record>
+
+    <record id="commandes_action" model="ir.actions.act_window">
+        <field name="name">Commandes</field>
+        <field name="res_model">commande</field>
+        
+    </record>
+
+     <record id="synchroniser_action" model="ir.actions.act_window">
+        <field name="name">Synchroniser</field>
+        <field name="res_model">synchroniser</field>
+        
+    </record>
+
+    <record id="livraison_action" model="ir.actions.act_window">
+        <field name="name">Livraison</field>
+        <field name="res_model">livraison</field>
+        
+    </record>
+
+    <menuitem
+        id="commandes_menu_item"
+        name="Commandes"
+        parent="shipment_root_menu"
+        action="commandes_action"
+    />
+    <menuitem
+        id="synchroniser_menu_item"
+        name="Synchroniser"
+        parent="shipment_root_menu"
+        action="synchroniser_action"
+    />
+    <menuitem
+        id="livraison_menu_item"
+        name="Livraison"
+        parent="shipment_root_menu"
+        action="livraison_action"
+    />
+
+</odoo>
